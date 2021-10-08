@@ -7,11 +7,23 @@
     <title>помогите</title>
 </head>
 <body>
-<div class="container p-2 text-dark rounded bg-warning">
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4" style="padding-left: 40px">Я не знаю, что я делаю</span>
+    </a>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/view" class="nav-link">Новости</a></li>
+        <li class="nav-item" style="padding-right: 40px"><a href="/write" class="nav-link active" aria-current="page">Создать новость</a></li>
+    </ul>
+</header>
+
+<div class="container p-2 text-dark rounded bg-light">
     <form method="post">
         <h3 class="text-center">Создать новость</h3>
-        <h5>Тема Новости:</h5>
+        <h6>Тема новости:</h6>
         <input type="text" name="Tem" id="Tem" class="form-control" placeholder="Обязательно!"><br>
+        <h6>Текст:</h6>
         <textarea name="Mes" id="Mes" class="form-control" placeholder="Обязательно" rows="10"></textarea>
         <input type="submit" class="btn btn-info center mx-auto d-block m-3" value="Создать сервер">
     </form>

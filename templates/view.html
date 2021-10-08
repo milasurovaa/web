@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/moi.css')}}">
+    <title>не помогайте</title>
+</head>
+<body>
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <span class="fs-4" style="padding-left: 40px">Я не знаю, что я делаю</span>
+    </a>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/view" class="nav-link active" aria-current="page">Новости</a></li>
+        <li class="nav-item" style="padding-right: 40px"><a href="/write" class="nav-link">Создать новость</a></li>
+    </ul>
+</header>
+<div class="col-md-10" style="padding-left: 320px">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">Тема новости</h3>
+          <div class="mb-1 text-muted">Дата</div><br>
+          <p class="card-text mb-auto">Текст новости</p>
+        </div>
+
+      </div>
+    </div>
+
+{% for al in a%}
+
+<div class="container p-2 text-dark rounded bg-light">
+    <h4 class="text-center">{{ al.zag }}</h4>
+    <p2 style="padding-left: 199px;" class="p-2 m-1">{{ al.text }}</p2>
+
+{% endfor %}
+</div>
+</body>
+</html>

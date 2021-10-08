@@ -26,7 +26,6 @@ def write():
 @app.route('/view')
 def view():
     a = News.query.order_by(News.id).all()
-    return render_template('view.html')
-
+    return render_template('view.html', a=a)
 
 app.run(host='127.0.0.1', debug=True)
